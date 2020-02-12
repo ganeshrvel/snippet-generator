@@ -4,6 +4,7 @@ import {
   SnippetViewerAppType,
   SnippetViewerProps
 } from './SnippetViewer.types';
+import { getSnippetBody } from '../helpers';
 
 const SnippetViewer: React.FC<SnippetViewerProps> = props => {
   const { desc, snippet, tabTrigger } = props;
@@ -13,42 +14,6 @@ const SnippetViewer: React.FC<SnippetViewerProps> = props => {
   const handleAppTypeClick = (type: SnippetViewerAppType) => {
     setAppType(type);
   };
-
-  let snippetBody = '';
-
-  switch (appType) {
-    case 'vscode':
-      snippetBody = `"${desc}": {
-  "prefix": "${tabTrigger}",
-  "body": [
-    "${snippet}"
-  ],
-  "description": "${desc}"
-}`;
-      break;
-    case 'sublime':
-      snippetBody = `<snippet>
-  <content><![CDATA[
-${snippet}
-]]></content>
-  <tabTrigger>${tabTrigger}</tabTrigger>
-  <description>${desc}</description>
-  <!-- Optional: Set a scope to limit where the snippet will trigger -->
-  <!-- <scope >source.python</scope > -->
-</snippet>`;
-      break;
-
-    case 'atom':
-      snippetBody = `'${desc}':
-'prefix': '${tabTrigger}'
-'body': """
-  ${snippet}
-"""`;
-      break;
-
-    default:
-      break;
-  }
 
   return (
     <div className={styles.container}>
@@ -80,7 +45,10 @@ ${snippet}
           </button>
         </div>
 
-        <textarea readOnly value={snippetBody} />
+        <textarea
+          readOnly
+          value={getSnippetBody(appType, desc, tabTrigger, snippet)}
+        />
       </div>
     </div>
   );
