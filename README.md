@@ -11,7 +11,7 @@ cd snippet-generator
 yarn install
 ```
 
-# Run
+### Run
 ```shell
 yarn run start
 ```
