@@ -1,0 +1,60 @@
+// ----------------------------------------------------------------------
+// Font Sizes
+// ----------------------------------------------------------------------
+$regularSize: 14;
+
+// ----------------------------------------------------------------------
+// Font Families
+// ----------------------------------------------------------------------
+$appFontFamily: 'Source Sans Pro', sans-serif;
+
+// ----------------------------------------------------------------------
+// styles
+// ----------------------------------------------------------------------
+$appBgColor: #1f2022 !default;
+$containerBgColor: #2d2e30 !default;
+$appPrimaryColor: #ec1c24 !default;
+$appSecondaryColor: #fff !default;
+$headerBgColor: #2b2e33 !default;
+$elementsFillColor: #313235 !default;
+$elementsHoverFillColor: #3f3f42 !default;
+$macOsNativeColor: #aba8aa !default;
+$macOsMenuHoverNativeColor: #0162d3 !default;
+
+$snackbarErrorColor: #dc7778 !default;
+$snackbarWarningColor: #f5822a !default;
+$snackbarInfoColor: #78a0dc !default;
+$snackbarSuccessColor: #72b55f !default;
+
+$btnDisableBgColor: #ccc;
+$btnDisableColor: #666;
+$primarybtnHoverBgColor: #ce0008;
+
+$projectCrudContainerBgColor: #2c2d31;
+$projectCardBgColor: #e2e2e2;
+
+$mapboxMapBgColor: #232426;
+
+$mlObjectAIFillColor: rgba(33, 150, 243, 0.2);
+$mlObjectAIBorderColor: rgba(33, 150, 243, 1);
+$mlObjectManualFillColor: rgba(76, 175, 80, 0.2);
+$mlObjectManualBorderColor: rgba(76, 175, 80, 1);
+
+$googleMapWidth: 420;
+$googleMapHeight: 300;
+
+// ----------------------------------------------------------------------
+// sizes
+// ----------------------------------------------------------------------
+$headerHeight: 60;
+$bodyContainerMarginTop: #{$headerHeight + 40};
+
+$maxBodyContainerWidth: 1500;
+$maxSnackbarContainerHeight: 450;
+
+$projectCrudContainerMaxWidth: 1080;
+$projectCrudContainerFieldsWrapperMaxWidth: 350;
+$projectCrudContainerElementMaxWidth: 320;
+
+$osViewerWrapperHeight: calc(100vh - 130px);
+$olViewerWrapperHeight: calc(100vh - 100px);

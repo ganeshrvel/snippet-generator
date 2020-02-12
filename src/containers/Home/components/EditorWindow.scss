@@ -1,0 +1,25 @@
+@import '../../../styles/scss/base/base';
+
+.container {
+  width: 100%;
+
+  textarea {
+    width: 100%;
+
+    & + textarea {
+      margin-top: 5px;
+    }
+
+    &.tabTrigger {
+      height: 75px;
+    }
+
+    &.desc {
+      height: 75px;
+    }
+
+    &.snippet {
+      height: 200px;
+    }
+  }
+}

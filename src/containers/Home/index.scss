@@ -1,0 +1,7 @@
+@import '../../styles/scss/base/base';
+
+.container {
+  .innerWrapper {
+    @include display_flex();
+  }
+}

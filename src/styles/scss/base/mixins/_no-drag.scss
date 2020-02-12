@@ -1,0 +1,10 @@
+// example: @include no-drag();
+
+@mixin no-drag() {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  /* stylelint-disable-next-line property-no-unknown */
+  user-drag: none;
+}
