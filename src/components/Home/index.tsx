@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './index.scss';
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div className={styles.test}>
+      <p>Home</p>
+    </div>
+  );
 };
 
 export default Home;
