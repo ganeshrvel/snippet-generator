@@ -3,6 +3,7 @@ import styles from './index.scss';
 import { HomeProps } from './index.types';
 import EditorWindow from './components/EditorWindow';
 import SnippetViewer from './components/SnippetViewer';
+import { EditorWindowFieldsType } from './components/EditorWindow.types';
 
 const Home: React.FC<HomeProps> = () => {
   const [desc, setDesc] = useState('');
@@ -11,7 +12,7 @@ const Home: React.FC<HomeProps> = () => {
 
   const handleSnippetValuesChange = (
     event: React.ChangeEvent<HTMLTextAreaElement>,
-    type: 'desc' | 'tabTrigger' | 'snippet'
+    type: EditorWindowFieldsType
   ) => {
     const { value } = event.target;
 

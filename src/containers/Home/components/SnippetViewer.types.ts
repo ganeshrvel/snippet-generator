@@ -3,3 +3,5 @@ export interface SnippetViewerProps {
   tabTrigger: string;
   snippet: string;
 }
+
+export type SnippetViewerAppType = 'vscode' | 'sublime' | 'atom';
