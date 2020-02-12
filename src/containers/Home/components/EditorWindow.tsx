@@ -13,6 +13,7 @@ const EditorWindow: React.FC<EditorWindowProps> = props => {
         onChange={event => {
           onSnippetValuesChange(event, 'desc');
         }}
+        autoFocus // eslint-disable-line jsx-a11y/no-autofocus
       />
       <input
         placeholder="Tab Trigger"

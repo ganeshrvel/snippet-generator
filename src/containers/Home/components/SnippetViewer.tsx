@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import classnames from 'classnames';
 import styles from './SnippetViewer.scss';
 import {
   SnippetViewerAppType,
@@ -16,37 +17,46 @@ const SnippetViewer: React.FC<SnippetViewerProps> = props => {
     setAppType(type);
   };
 
+  const appTypeButtonList: {
+    type: SnippetViewerAppType;
+    label: string;
+    iconSrc: string;
+  }[] = [
+    {
+      type: 'vscode',
+      label: 'Visual Studio Code',
+      iconSrc: 'button-icons/vscode.png'
+    },
+    {
+      type: 'sublime',
+      label: 'Sublime Text',
+      iconSrc: 'button-icons/sublime.png'
+    },
+    {
+      type: 'atom',
+      label: 'Atom',
+      iconSrc: 'button-icons/atom.png'
+    }
+  ];
+
   return (
     <div className={styles.container}>
       <div className={styles.innerWrapper}>
         <div className={styles.buttonWrapper}>
-          <button
-            type="button"
-            onClick={() => {
-              handleAppTypeClick('vscode');
-            }}
-          >
-            <img
-              alt="Visual Studio Code"
-              src={imgsrc('button-icons/vscode.png')}
-            />
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              handleAppTypeClick('sublime');
-            }}
-          >
-            <img alt="Sublime Text" src={imgsrc('button-icons/sublime.png')} />
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              handleAppTypeClick('atom');
-            }}
-          >
-            <img alt="Atom" src={imgsrc('button-icons/atom.png')} />
-          </button>
+          {appTypeButtonList.map(a => (
+            <button
+              key={a.type}
+              className={classnames({
+                [styles.isActive]: a.type === appType
+              })}
+              type="button"
+              onClick={() => {
+                handleAppTypeClick(a.type);
+              }}
+            >
+              <img alt={a.label} src={imgsrc(a.iconSrc)} />
+            </button>
+          ))}
         </div>
 
         <pre>{getSnippetBody(appType, desc, tabTrigger, snippet)}</pre>

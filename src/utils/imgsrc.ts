@@ -1,4 +1,4 @@
-/* eslint global- require: off, prefer-template: off */
+/* eslint global-require: off, prefer-template: off */
 
 /**
  * handle image import into the program.
@@ -6,7 +6,7 @@
  * @param filePath
  * @returns {*}
  */
-export const imgsrc = filePath => {
+export const imgsrc = (filePath: string) => {
   try {
     // eslint-disable-next-line global-require
     return require('../images/' + filePath);
