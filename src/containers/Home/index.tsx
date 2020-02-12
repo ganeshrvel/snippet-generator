@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import styles from './index.scss';
-import { HomeProps } from './index.types';
 import EditorWindow from './components/EditorWindow';
 import SnippetViewer from './components/SnippetViewer';
 import { EditorWindowFieldsType } from './components/EditorWindow.types';
 
-const Home: React.FC<HomeProps> = () => {
+const Home: React.FC = () => {
   const [desc, setDesc] = useState('');
   const [tabTrigger, setTabTrigger] = useState('');
   const [snippet, setSnippet] = useState('');
 
   const handleSnippetValuesChange = (
-    event: React.ChangeEvent<HTMLTextAreaElement>,
+    event:
+      | React.ChangeEvent<HTMLTextAreaElement>
+      | React.ChangeEvent<HTMLInputElement>,
     type: EditorWindowFieldsType
   ) => {
     const { value } = event.target;

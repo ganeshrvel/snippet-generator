@@ -3,5 +3,9 @@
 .container {
   .innerWrapper {
     @include display_flex();
+    @include flex-direction(row);
+    @include flex-grow(1);
+
+    width: 100%;
   }
 }

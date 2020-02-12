@@ -5,6 +5,7 @@ import {
   SnippetViewerProps
 } from './SnippetViewer.types';
 import { getSnippetBody } from '../helpers';
+import { imgsrc } from '../../../utils/imgsrc';
 
 const SnippetViewer: React.FC<SnippetViewerProps> = props => {
   const { desc, snippet, tabTrigger } = props;
@@ -25,7 +26,10 @@ const SnippetViewer: React.FC<SnippetViewerProps> = props => {
               handleAppTypeClick('vscode');
             }}
           >
-            VSCode
+            <img
+              alt="Visual Studio Code"
+              src={imgsrc('button-icons/vscode.png')}
+            />
           </button>
           <button
             type="button"
@@ -33,7 +37,7 @@ const SnippetViewer: React.FC<SnippetViewerProps> = props => {
               handleAppTypeClick('sublime');
             }}
           >
-            Sublime
+            <img alt="Sublime Text" src={imgsrc('button-icons/sublime.png')} />
           </button>
           <button
             type="button"
@@ -41,14 +45,11 @@ const SnippetViewer: React.FC<SnippetViewerProps> = props => {
               handleAppTypeClick('atom');
             }}
           >
-            Atom
+            <img alt="Atom" src={imgsrc('button-icons/atom.png')} />
           </button>
         </div>
 
-        <textarea
-          readOnly
-          value={getSnippetBody(appType, desc, tabTrigger, snippet)}
-        />
+        <pre>{getSnippetBody(appType, desc, tabTrigger, snippet)}</pre>
       </div>
     </div>
   );

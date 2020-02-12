@@ -7,14 +7,14 @@ const EditorWindow: React.FC<EditorWindowProps> = props => {
 
   return (
     <div className={styles.container}>
-      <textarea
+      <input
         placeholder="Description"
         className={styles.desc}
         onChange={event => {
           onSnippetValuesChange(event, 'desc');
         }}
       />
-      <textarea
+      <input
         placeholder="Tab Trigger"
         className={styles.tabTrigger}
         onChange={event => {

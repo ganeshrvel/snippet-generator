@@ -88,8 +88,14 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
+}
+
+textarea,
+input,
+pre {
+  resize: vertical;
+  box-sizing: border-box;
 }
 
 /* make sure to set some focus styles for accessibility */
@@ -436,7 +442,6 @@ fieldset {
 
 textarea {
   resize: vertical;
-  box-sizing: border-box;
 }
 
 .chromeframe {

@@ -1,6 +1,8 @@
 export interface EditorWindowProps {
   onSnippetValuesChange: (
-    event: React.ChangeEvent<HTMLTextAreaElement>,
+    event:
+      | React.ChangeEvent<HTMLTextAreaElement>
+      | React.ChangeEvent<HTMLInputElement>,
     type: EditorWindowFieldsType
   ) => void;
 }
