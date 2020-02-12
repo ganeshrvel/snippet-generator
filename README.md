@@ -15,5 +15,3 @@ yarn run start
 ```
 
 Local server url: [http://localhost:3000/](http://localhost:3000/)
-
-Github page url: [https://ganeshrvel.github.io/snippet-generator/](https://ganeshrvel.github.io/snippet-generator/)
