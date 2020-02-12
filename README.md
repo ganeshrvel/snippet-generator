@@ -6,6 +6,8 @@ git clone https://github.com/ganeshrvel/snippet-generator.git
 
 npm -g install yarn
 
+cd snippet-generator
+
 yarn install
 ```
 
