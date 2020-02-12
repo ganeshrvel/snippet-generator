@@ -58,5 +58,23 @@
       overflow: auto;
       resize: none;
     }
+
+    button.copyAll {
+      @include box-shadow-1(rgba(0, 0, 0, 0.3) 0 1px 4px -1px);
+
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      border-radius: 4px;
+      background: linear-gradient(45deg, #007af5, #0080ff);
+      color: #fff;
+      height: 30px;
+      width: 75px;
+      border: none;
+
+      &:hover {
+        background: #0f6fd0;
+      }
+    }
   }
 }
