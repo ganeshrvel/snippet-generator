@@ -1,0 +1,40 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "rules": {
+    "selector-pseudo-class-no-unknown": null,
+    "at-rule-no-unknown": null,
+    "no-descending-specificity": null,
+    "function-calc-no-invalid": null,
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["blockless-after-same-name-blockless"],
+        "ignore": ["after-comment", "first-nested"],
+        "severity": "error"
+      }
+    ],
+    "custom-property-empty-line-before": [
+      "always",
+      {
+        "except": ["after-custom-property"],
+        "ignore": ["after-comment", "first-nested", "inside-single-line-block"],
+        "severity": "error"
+      }
+    ],
+    "declaration-empty-line-before": [
+      "always",
+      {
+        "except": ["after-declaration"],
+        "ignore": ["after-comment", "first-nested", "inside-single-line-block"],
+        "severity": "error"
+      }
+    ],
+    "rule-empty-line-before": [
+      "always",
+      {
+        "ignore": ["after-comment", "first-nested"],
+        "severity": "error"
+      }
+    ]
+  }
+}
