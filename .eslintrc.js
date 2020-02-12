@@ -74,9 +74,7 @@ module.exports = {
       {
         vars: 'all',
         args: 'after-used',
-        ignoreRestSiblings: false,
-        argsIgnorePattern: '^(dispatch|getState)|_',
-        varsIgnorePattern: ''
+        ignoreRestSiblings: false
       }
     ],
     'padding-line-between-statements': [
