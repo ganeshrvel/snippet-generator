@@ -72,9 +72,11 @@ module.exports = {
     'no-unused-vars': [
       'error',
       {
+        vars: 'all',
         args: 'after-used',
-        argsIgnorePattern: '^(theme|props|state|ownProps|dispatch|getState)|_',
-        varsIgnorePattern: '^(variables|mixins|args|log)'
+        ignoreRestSiblings: false,
+        argsIgnorePattern: '^(dispatch|getState)|_',
+        varsIgnorePattern: ''
       }
     ],
     'padding-line-between-statements': [
