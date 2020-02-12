@@ -3,8 +3,12 @@
 .container {
   .innerWrapper {
     @include display_flex();
-    @include flex-direction(row);
     @include flex-grow(1);
+    @include flex-direction(column);
+
+    @media (min-width: #{$desktopSize}px) {
+      @include flex-direction(row);
+    }
 
     width: 100%;
   }
