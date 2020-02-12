@@ -1,0 +1,8 @@
+@import '../../styles/scss/base/base';
+
+.container {
+  @include margin-auto();
+
+  max-width: 1200px;
+  padding: 40px 40px;
+}
