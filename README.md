@@ -1,6 +1,6 @@
 # Snippet Generator
 
-###Install
+### Install
 ```shell
 git clone https://github.com/ganeshrvel/snippet-generator.git
 
@@ -11,7 +11,7 @@ cd snippet-generator
 yarn install
 ```
 
-#Run
+# Run
 ```shell
 yarn run start
 ```
